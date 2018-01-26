@@ -14,6 +14,7 @@ class NewsForm extends Component {
         news_id:  this.props.updNews ? this.props.updNews.news_id : null,
         title: this.props.updNews ? this.props.updNews.ntitle : '',
         text: this.props.updNews ? this.props.updNews.ntext : '',
+        label: this.props.updNews ? 'Update news' : 'Add new news',
         errors: {},
         loading: false,
         done: false
@@ -70,7 +71,7 @@ class NewsForm extends Component {
     render(){
         const form = (
             <form className={classnames("ui", "form", {loading: this.state.loading})} onSubmit={this.handleSubmit}>
-                <h1>Add new news</h1>
+                <h1>{this.state.label}</h1>
                 {!!this.state.errors.global && <div className="ui negative message"><p>{this.state.errors.global}</p></div>}
                 <div className={classnames('field', {error: !!this.state.errors.title})}>
                     <label htmlFor="title">Title</label>

@@ -23,5 +23,4 @@ export default function news(state=[], action = {}){
             }
         default: return state
     }
-    return state
 }
