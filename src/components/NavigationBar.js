@@ -20,9 +20,6 @@ const ActiveLink = ({ label, to, activeOnlyWhenExact }) => (
     )} />
 );
 
-const styles = {
-
-}
 
 class NavigationBar extends Component {
     logout(e) {

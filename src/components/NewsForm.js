@@ -111,7 +111,7 @@ class NewsForm extends Component {
 function mapStateToProps(state, props) {
     function findNews(news) {
         for (let i = 0; i< news.length; i++){
-            if (news[i].news_id == match.params.news_id){
+            if (news[i].news_id.toString() === match.params.news_id){
                 return news[i]
             }
         }

@@ -9,10 +9,10 @@ export default function news(state=[], action = {}){
            return state.filter(item => item.news_id !== action.newsId);
 
         case NEWS_FETCHED:
-            const index = state.findIndex(item => item.news_id == action.payload.news_id);
+            const index = state.findIndex(item => item.news_id === action.payload.news_id);
             if (index > -1){
                 return state.map(item => {
-                    if(item.news_id == action.payload.news_id) return action.payload[0];
+                    if(item.news_id === action.payload.news_id) return action.payload[0];
                     return item[0];
                 });
             } else{
